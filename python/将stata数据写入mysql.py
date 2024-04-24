@@ -7,7 +7,7 @@ from sqlalchemy import create_engine
 stata_setup.config("D:\programs\stata","mp")
 
 # 将Stata数据集转换为Pandas DataFrame
-file_path = os.path.join('C:/Users/1/Desktop/Code/auto-finance-robot', 'findata.dta')
+file_path = os.path.join('C:/Users/1/Desktop/Code/auto-finance-robot/数据文件', 'findata.dta')
 df = pd.read_stata(file_path)
 print(df)
 # 连接到MySQL数据库 记得修改成自己的数据库信息
