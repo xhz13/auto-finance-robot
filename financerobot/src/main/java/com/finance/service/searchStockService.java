@@ -9,4 +9,5 @@ import com.finance.domain.entity.stockSearch;
 
 public interface searchStockService extends IService<stockSearch>{
     Map<String,String> search(String stk);
+    Map<String,String> searchStockclick(String stk);
 }

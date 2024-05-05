@@ -1,11 +1,11 @@
 <script setup lang="ts">
+ import searchBar from '../components/searchBar.vue';
 </script>
 
 <template>
-  <div>
-    <router-view/>
-  </div>
+  <searchBar/>
 </template>
 
 <style scoped>
+
 </style>
