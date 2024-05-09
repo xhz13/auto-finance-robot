@@ -3,9 +3,13 @@
 </script>
 
 <template>
+  <div class="search">
   <searchBar/>
+  </div>
 </template>
 
 <style scoped>
-
+.search{
+  margin-top: 100px;
+}
 </style>

@@ -1,7 +1,11 @@
 package com.finance.service;
 
-import com.baomidou.mybatisplus.extension.service.IService;
+import java.util.List;
 
-public interface InquireStockService extends IService<stockSearch>{
-    
+import com.baomidou.mybatisplus.extension.service.IService;
+import com.finance.domain.entity.StockData;
+import com.finance.domain.entity.VO.InquireStockfoundation;
+
+public interface InquireStockService extends IService<StockData>{
+    List<InquireStockfoundation> inquire(String stkcd);
 }

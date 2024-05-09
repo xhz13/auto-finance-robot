@@ -117,8 +117,6 @@ public class searchStockServiceImpl extends ServiceImpl<stockSearchMapper,stockS
 
     @Override
     public Map<String,String> searchStockclick(String stk) {
-
-
         stockRequest stockRequest = JSON.parseObject(stk, stockRequest.class);
         if(stockRequest==null||stockRequest.getStk()==" ") return null;
         SearchResponse<JsonData> response=null;

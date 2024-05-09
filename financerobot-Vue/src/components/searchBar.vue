@@ -17,10 +17,10 @@ const click = async () => {
                 stk: input.value,
             }
         });
-        console.log(response.data); // 处理响应数据
+        // console.log(response.data); // 处理响应数据
         javaResponse.value = response.data
     } catch (error) {
-        console.error(error); // 处理错误情况
+        // console.error(error); // 处理错误情况
     }
 }
 interface LinkItem {
@@ -45,7 +45,7 @@ async function calculate(newValue:String) {
                 stk: newValue, // 使用函数参数而不是直接访问input.value
             }
         });
-        console.log(response.data); // 处理响应数据
+        // console.log(response.data); // 处理响应数据
         javaResponse.value = response.data; // 假设javaResponse是一个响应式引用
         if (typeof javaResponse.value === 'object' && javaResponse.value !== null) {
             Object.entries(javaResponse.value).forEach(([company, code]) => {
@@ -56,18 +56,20 @@ async function calculate(newValue:String) {
             });
         }
         else{
-            console.log("no data")
+            // console.log("no data")
             links.value = []
         }
     } catch (error) {
-        console.error(error); // 处理错误情况
+        // console.error(error); // 处理错误情况
     }
 }
 const handleSelect = (item: Record<string, any>) => {
   // console.log(item)
   // 检查item.value的类型
   const itemValue = item.value.split(' ')[1];
-  router.push({ path: '/analyse', query: itemValue });
+  router.push({ path: '/analyse', query: itemValue }).then(() => {
+    router.go(0);
+  });
 }
 onMounted(() => {
   links.value = loadAll()
