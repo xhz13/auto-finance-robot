@@ -1168,7 +1168,7 @@ response.data.forEach((item: any) => {
 
 
 import OpenAI from "openai";
-const openai = new OpenAI({ apiKey: '',dangerouslyAllowBrowser: true  });
+
 
 const chatans = ref<string | null>('');
 const chatgpt = async () => {
