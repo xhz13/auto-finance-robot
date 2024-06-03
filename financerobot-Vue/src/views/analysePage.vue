@@ -1167,6 +1167,29 @@ response.data.forEach((item: any) => {
 
 
 
+import OpenAI from "openai";
+const openai = new OpenAI({ apiKey: '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',dangerouslyAllowBrowser: true  });
+
+const chatans = ref<string | null>('');
+const chatgpt = async () => {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: `不用计算直接给出结论，并且告诉我公司名字，如果为0或者nan则代表当年的数据没有收集到跳过不用分析,这是${responsedataArray.value[0].stknm}公司的2018年roa${roaArray[0].value}资产周转率${totAssRatioArray[0].value }权益乘数为${TotShareEquitArray[0].value  / totAssArray[0].value}、2019年roa${roaArray[1].value}资产周转率${totAssRatioArray[1].value} 权益乘数为${TotShareEquitArray[1].value  / totAssArray[1].value}、2020年roa${roaArray[2].value}资产周转率${totAssRatioArray[2].value} 权益乘数为${TotShareEquitArray[2].value  / totAssArray[2].value}、2021年roa${roaArray[3].value}资产周转率${totAssRatioArray[3].value} 权益乘数为${TotShareEquitArray[3].value  / totAssArray[3].value}、2022年roa${roaArray[4].value}资产周转率${totAssRatioArray[4].value} 权益乘数为${TotShareEquitArray[4].value  / totAssArray[4].value}请用杜邦分析来分析一下这家公司的财务情况` }],
+    model: "gpt-3.5-turbo",
+  });
+  chatans.value = completion.choices[0].message.content;
+  console.log(completion.choices[0]);
+};
+
+const cashans = ref<string | null>('');
+const cashanschat = async () => {
+  const completion = await openai.chat.completions.create({
+    messages: [{ role: "system", content: `不用计算直接给出结论，并且告诉我公司名字，如果为0或者nan则代表当年的数据没有收集到跳过不用分析,这是${responsedataArray.value[0].stknm}公司的2018年到2022年五年的财务数据，经营活动现金和应得净现金${[nocfnoteArray[0].value, nocfnoteArray[1].value, nocfnoteArray[2].value, nocfnoteArray[3].value, nocfnoteArray[4].value]},应得现金净流量${[evaArray[0].value, evaArray[1].value, evaArray[2].value, evaArray[3].value, evaArray[4].value]},总资产周转率${[totAssRatioArray[0].value, totAssRatioArray[1].value, totAssRatioArray[2].value, totAssRatioArray[3].value, totAssRatioArray[4].value]},获现率${[nocfevaArray[0].value, nocfevaArray[1].value, nocfevaArray[2].value, nocfevaArray[3].value, nocfevaArray[4].value]}请分析一下这家公司的财务情况` }],
+    model: "gpt-3.5-turbo",
+  });
+  cashans.value = completion.choices[0].message.content;
+  console.log(completion.choices[0]);
+};
+
 
 </script>
 
