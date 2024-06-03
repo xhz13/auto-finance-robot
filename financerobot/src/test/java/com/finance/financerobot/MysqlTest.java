@@ -1,5 +1,4 @@
 package com.finance.financerobot;
-
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Connection;
@@ -40,3 +39,5 @@ public class MysqlTest {
         testDatabaseConnection();
     }
 }
+
+

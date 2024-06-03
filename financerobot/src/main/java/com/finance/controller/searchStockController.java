@@ -25,3 +25,4 @@ public class searchStockController {
         return searchStockService.searchStockclick(stk);
     }
 }
+

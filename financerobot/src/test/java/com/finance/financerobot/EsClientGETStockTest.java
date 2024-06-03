@@ -7,7 +7,6 @@ import org.apache.http.auth.AuthScope;
 import org.apache.http.auth.UsernamePasswordCredentials;
 import org.apache.http.impl.client.BasicCredentialsProvider;
 import org.elasticsearch.client.RestClient;
-import org.elasticsearch.search.suggest.Suggest;
 import org.junit.jupiter.api.Test;
 
 import co.elastic.clients.elasticsearch.ElasticsearchClient;
