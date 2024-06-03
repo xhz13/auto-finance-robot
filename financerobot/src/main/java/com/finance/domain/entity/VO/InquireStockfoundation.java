@@ -45,6 +45,23 @@ public class InquireStockfoundation {
     private Double curRt;
     //速冻比率
     private Double qckRt;
-
+    //ROA
+    private Double roa;
+    //ROE
+    private Double roe;
+    //资产周转率
+    private Double totAssRat;
+    //每股收益
+    private Double eps;
+    //每股经营活动产生的净流量增长率
+    private Double opeCPSGrRt;
+    //获现率
+    private Double nocfeva;
+    //财务杠杆
+    private Double finlev;
+    //经营杠杆
+    private Double oCFlev;
+    //综合杠杆
+    private Double totlev;
 }
 

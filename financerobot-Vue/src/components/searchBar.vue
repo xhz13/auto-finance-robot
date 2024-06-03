@@ -81,7 +81,7 @@ onMounted(() => {
     <el-autocomplete
     v-model="state"
     :fetch-suggestions="querySearchAsync"
-    placeholder="Please input"
+    placeholder="请输入股票代码或公司名称"
     @select="handleSelect"
     style="width: 600px;"
     />
