@@ -3,14 +3,14 @@ import showPage from './views/showPage.vue'
 </script>
 
 <template>
-  <!-- <Suspense>
+  <Suspense>
   <div>
     <router-view/>
   </div>
-</Suspense> -->
-<div>
+</Suspense>
+<!-- <div>
   <showPage/>
-</div>
+</div> -->
 </template>
 
 <style scoped>

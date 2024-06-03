@@ -85,7 +85,7 @@ onMounted(() => {
     @select="handleSelect"
     style="width: 600px;"
     />
-    <el-button type="primary" :icon="Search" @click="click" circle />
+    <el-button type="primary" :icon="Search" @click="click" circle style="margin-left: 15px;"/>
   </div>
 </template>
 <style scoped>

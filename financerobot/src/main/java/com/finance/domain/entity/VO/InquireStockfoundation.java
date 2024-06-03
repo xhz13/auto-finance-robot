@@ -41,5 +41,10 @@ public class InquireStockfoundation {
     private Double NOCFNote;
     // 应得现金净流量(应得经营净现金)
     private Double eva;
+    // 流动比率
+    private Double curRt;
+    //速冻比率
+    private Double qckRt;
+
 }
 
