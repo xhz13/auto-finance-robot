@@ -1,12 +1,16 @@
 <script setup lang="ts">
+import showPage from './views/showPage.vue'
 </script>
 
 <template>
-  <Suspense>
+  <!-- <Suspense>
   <div>
     <router-view/>
   </div>
-</Suspense>
+</Suspense> -->
+<div>
+  <showPage/>
+</div>
 </template>
 
 <style scoped>
